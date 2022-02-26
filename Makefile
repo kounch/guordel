@@ -25,7 +25,7 @@ build/%.o: %.asm
 all : $(EXEC)
 
 $(EXEC) : $(OBJECTS)
-	$(CC) $(LDFLAGS) -startup=$(CRT) $(OBJECTS) -o $(EXEC) -create-app
+	$(CC) $(LDFLAGS) -startup=$(CRT) $(OBJECTS) -o $(EXEC)
 
 .PHONY: clean
 clean:
