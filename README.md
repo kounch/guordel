@@ -1,5 +1,15 @@
 # Guardle
 
+## Memory map
+
+Reserved Spaces
+
+42484-45566 (3K) Compiled C binary code
+45566-48119 (2.5K) Solutions list
+48119-48125 (6 bytes) Word Letters (0 terminated string)
+48126 (2 bytes) Word Number
+48128-65022 (16.5K) Word Dictionary
+
 ## Compression
 
 Word packing algorithm based on [http://alexanderpruss.blogspot.com/2022/02/game-boy-wordle-how-to-compress-12972.html?m=1]
@@ -14,9 +24,7 @@ Word packing algorithm based on [http://alexanderpruss.blogspot.com/2022/02/game
 
 ## Word list sources
 
-[https://github.com/bayu01/Wordle-ES]
-
-[https://github.com/danielg88/wordle-analysis]
+[https://wordle.danielfrg.com](Spanish)
 
 ---
 

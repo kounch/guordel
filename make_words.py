@@ -38,37 +38,44 @@ def main():
 
     LOGGER.debug('Start')
     str_words = os.path.join(MY_DIRPATH, 'words.txt')
+    str_sols = os.path.join(MY_DIRPATH, 'wordss.txt')
     str_binwords = os.path.join(MY_DIRPATH, 'words')
+    str_binsols = os.path.join(MY_DIRPATH, 'wordss')
 
-    arr_res = create_wordpack(str_words)
-    i_arr_len = len(arr_res)
+    dict_words = create_wordpack(str_words)
+    i_arr_len = len(dict_words)
     i_offset = 1 + i_arr_len * 4
     i_total_count = 0
     with open(f'{str_binwords}', "wb") as out_bindata:
         out_bindata.write(i_arr_len.to_bytes(1, 'big'))  # Total Letters
-        for c_index in arr_res:
-            i_offset += len(arr_res[c_index][0])
-            i_count = arr_res[c_index][1]
+        for c_index in dict_words:
+            i_offset += len(dict_words[c_index][0])
+            i_count = dict_words[c_index][1]
             i_total_count += i_count
             out_bindata.write(i_offset.to_bytes(2, 'big'))  # Letter offset
             out_bindata.write(i_count.to_bytes(2, 'big'))  # Letter word count
-        for c_index in arr_res:
-            out_bindata.write(arr_res[c_index][0])  # Letter word pack
-
+        for c_index in dict_words:
+            out_bindata.write(dict_words[c_index][0])  # Letter word pack
     print(i_total_count)
+
+    i_sols_len, b_sols = create_solpack(str_words, str_sols)
+    with open(f'{str_binsols}', "wb") as out_bindata:
+        out_bindata.write(i_sols_len.to_bytes(2, 'big'))  # Total Solutions
+        out_bindata.write(b_sols)
+    print(i_sols_len)
+
     extract_word(str_binwords, i_total_count)
 
     LOGGER.debug('End')
 
 
-def create_wordpack(str_words):
+def create_wordpack(str_file_words):
     """Creates wordpack data from txt"""
-    arr_res = {}
-    with open(str_words, 'r', encoding='utf-8') as wordlist_handle:
+    dict_words = {}
+    with open(str_file_words, 'r', encoding='utf-8') as wordlist_handle:
         LOGGER.debug('Loading words...')
-        str_lines = wordlist_handle.readlines()
         i_last = 0
-        for str_line in str_lines:
+        for str_line in wordlist_handle.readlines():
             str_word = str_line.strip().upper()
             str_word = str_word.replace('Ñ', '[')
             if len(str_word) == 5:
@@ -80,9 +87,9 @@ def create_wordpack(str_words):
                     i_letter = i_letter << (5 * (3 - index))
                     i_word += i_letter
 
-                if c_index not in arr_res:
+                if c_index not in dict_words:
                     i_last = 0
-                    arr_res[c_index] = [b'', 0]
+                    dict_words[c_index] = [b'', 0]
 
                 i_diff = i_word - i_last
 
@@ -97,20 +104,36 @@ def create_wordpack(str_words):
                 else:
                     b_diff = i_diff.to_bytes(1, 'big')
 
-                arr_res[c_index][0] += b_diff
-                arr_res[c_index][1] += 1
+                dict_words[c_index][0] += b_diff
+                dict_words[c_index][1] += 1
                 i_last = i_word
 
                 # LOGGER.debug(f'{c_index}: {str_subword} ->{i_word} : {i_diff}')
 
-    return arr_res
+    return dict_words
 
 
-def extract_word(str_binwords, i_word_number=-1):
+def create_solpack(file_words, str_file_sols):
+    """"Indexes solutions"""
+    with open(file_words, 'r', encoding='utf-8') as wordlist_handle:
+        arr_words = wordlist_handle.readlines()
+
+    i_sols = 0
+    b_sols = b''
+    with open(str_file_sols, 'r', encoding='utf-8') as sollist_handle:
+        for str_word in sollist_handle.readlines():
+            i_sol = arr_words.index(str_word) + 1
+            b_sols += i_sol.to_bytes(2, 'big')
+            i_sols += 1
+
+    return i_sols, b_sols
+
+
+def extract_word(str_bin_words, i_word_number=-1):
     "Extracts a word from wordpack data"
     i_total_count = 0
     i_word_count = 0
-    with open(f'{str_binwords}', "rb") as in_bindata:
+    with open(f'{str_bin_words}', "rb") as in_bindata:
         index_len = int.from_bytes(in_bindata.read(1), 'big')
         arr_offsets = []
         arr_count = []
