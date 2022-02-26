@@ -4,12 +4,14 @@
 
 Reserved Spaces
 
-42484-45566 (3K) Compiled C binary code
+41716-44787 (3K) Compiled C binary code
+44788-45565 (768 bytes) Custom Font
 45566-48119 (2.5K) Solutions list
 48119-48125 (6 bytes) Word Letters (0 terminated string)
 48126 (2 bytes) Word Number
 48128-65022 (16.5K) Word Dictionary
 
+44788 = 
 ## Compression
 
 Word packing algorithm based on [http://alexanderpruss.blogspot.com/2022/02/game-boy-wordle-how-to-compress-12972.html?m=1]
