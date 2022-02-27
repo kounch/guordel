@@ -26,9 +26,9 @@ int main() {
   uint32_t i_word;
   int ret;
 
-  p_string = (unsigned char *)48120; // Result location
-  p_word = (unsigned char *)48126;
-  p_words = (unsigned char *)48128; // Word Dictionary
+  p_string = (unsigned char *)47097; // Result location
+  p_word = p_string + 5;   // Word number location
+  p_words = p_string + 7;  // Word Dictionary location
 
   // Get Word to obtain
   word_number = *(p_word)*256 + *(p_word + 1);
