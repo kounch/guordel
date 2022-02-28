@@ -1,18 +1,17 @@
-# Guardle
+# Guordel
 
 ## Memory map
 
 Reserved Spaces
 
-40960-43775 (2815 bytes) Compiled C binary code
-43776-44543 (768 bytes) Custom font
-44544-47096 (2553 bytes) Solutions list
-47097-47101 (5 bytes) Word Letters
-47102-47103 (2 bytes) Word Number
-47104-63999 (16.5K) Word Dictionary
+35840-38399 (2.5K bytes) Compiled C binary code
+38400-39167 (768 bytes) Custom font
+39168-44024 (4864 bytes) Solutions list
+44025-44029 (5 bytes) Word Letters
+44030-44031 (2 bytes) Word Number
+44032-63999 (19.5K) Word Dictionary
 64000-65536 (1.5K) Reserved for UGDs and C binary stack needs
 
-44788 = 
 ## Compression
 
 Word packing algorithm based on [http://alexanderpruss.blogspot.com/2022/02/game-boy-wordle-how-to-compress-12972.html?m=1]
@@ -28,6 +27,7 @@ Word packing algorithm based on [http://alexanderpruss.blogspot.com/2022/02/game
 ## Word list sources
 
 [https://wordle.danielfrg.com](Spanish)
+[https://www.nytimes.com/games/wordle/index.html](English)
 
 ---
 
