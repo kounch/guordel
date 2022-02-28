@@ -14,8 +14,10 @@ from __future__ import print_function
 import logging
 import sys
 import os
+import argparse
 
-__MY_VERSION__ = '0.0.1'
+__MY_NAME__ = 'make_words.py'
+__MY_VERSION__ = '1.0.0'
 
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.INFO)
@@ -37,10 +39,11 @@ def main():
     """Main routine"""
 
     LOGGER.debug('Start')
-    str_words = os.path.join(MY_DIRPATH, 'words.txt')
-    str_sols = os.path.join(MY_DIRPATH, 'wordss.txt')
-    str_binwords = os.path.join(MY_DIRPATH, 'words')
-    str_binsols = os.path.join(MY_DIRPATH, 'wordss')
+    arg_data = parse_args()
+    str_words = arg_data['str_words_infile']
+    str_binwords = arg_data['str_words_outfile']
+    str_sols = arg_data['str_solutions_infile']
+    str_binsols = arg_data['str_solutions_outfile']
 
     dict_words = create_wordpack(str_words)
     i_arr_len = len(dict_words)
@@ -67,6 +70,57 @@ def main():
     extract_word(str_binwords, i_total_count)
 
     LOGGER.debug('End')
+
+
+def parse_args():
+    """Parse command line arguments"""
+    values = {}
+    values['str_words_infile'] = os.path.join(MY_DIRPATH, 'words.txt')
+    values['str_words_outfile'] = os.path.join(MY_DIRPATH, 'words')
+    values['str_solutions_infile'] = os.path.join(MY_DIRPATH, 'wordss.txt')
+    values['str_solutions_outfile'] = os.path.join(MY_DIRPATH, 'wordss')
+
+    parser = argparse.ArgumentParser(description='Word packer for Guordel')
+    parser.add_argument('-v',
+                        '--version',
+                        action='version',
+                        version='%(prog)s {}'.format(__MY_VERSION__))
+    parser.add_argument('-i',
+                        '--input_words',
+                        action='store',
+                        dest='input_words',
+                        help='Source txt file with words')
+    parser.add_argument('-o',
+                        '--output_words',
+                        action='store',
+                        dest='output_words',
+                        help='Destination binary file with packed words')
+    parser.add_argument('-I',
+                        '--input_solutions',
+                        action='store',
+                        dest='input_solutions',
+                        help='Source txt file with solutions')
+    parser.add_argument('-O',
+                        '--output_solutions',
+                        action='store',
+                        dest='output_solutions',
+                        help='Destination binary file with packed solutions')
+
+    arguments = parser.parse_args()
+
+    if arguments.input_words:
+        values['str_words_infile'] = arguments.input_words
+
+    if arguments.output_words:
+        values['str_words_outfile'] = arguments.output_words
+
+    if arguments.input_solutions:
+        values['str_solutions_infile'] = arguments.input_solutions
+
+    if arguments.output_solutions:
+        values['str_solutions_outfile'] = arguments.output_solutions
+
+    return values
 
 
 def create_wordpack(str_file_words):
