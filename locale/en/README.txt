@@ -24,5 +24,8 @@ Browse to the directory where the files are and run the program `guordel.bas` fr
 
 How to play
 -----------
-Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was.
+Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was. Letters marked with green are in the word and in the correct spot. Letters marked with yellow are in the word but in the wrong spot. Letters marked with red aren`t in the word in any spot.
+
+On hard mode, any revealed and correct hint (marked with green) must be used in the right spot in subsequent guesses.
+
 Use the letters of the keyboard to type your word, and hit the `Enter` key when ready to guess.

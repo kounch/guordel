@@ -40,7 +40,9 @@ Browse to the directory where the files are and run the program `guordel.bas` fr
 
 ### How to play
 
-Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was.
+Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was. Letters marked with green are in the word and in the correct spot. Letters marked with yellow are in the word but in the wrong spot. Letters marked with red aren`t in the word in any spot.
+
+On hard mode, any revealed and correct hint (marked with green) must be used in the right spot in subsequent guesses.
 
 ![Game](./locale/en/game.png)
 
@@ -160,7 +162,9 @@ Ejecute el programa `guordel.bas`, dentro del directorio donde se hayan copiado 
 
 ### Cómo jugar
 
-Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra.
+Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra. Las letras marcadas con color verde están en la palabra y en la posición correcta. Las letras marcadas con color amarillo están en la palabra, pero en una posición incorrecta. Las letras marcadas con color rojo no están en la palabra.
+
+En el modo difícil, las letras reveladas y correctas (marcadas con verde) se han de utilizar en la posición correcta en intentos posteriores.
 
 ![Juego](./locale/es/juego.png)
 
