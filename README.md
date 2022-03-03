@@ -16,7 +16,7 @@ ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its der
 
 ### Loading instructions
 
-You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in three differente formats: tape for classic ZX Spectrum (`.tap`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
+You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in three differente formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
 
 #### Tape
 
@@ -138,7 +138,7 @@ ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o su
 
 ### Instrucciones de carga
 
-Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en tres formatos distintos: cinta (`.tap`) para ZX Spectrum clásico, archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
+Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en tres formatos distintos: cinta (`.tap` normal y `.tzx` turbo) para ZX Spectrum clásico, archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
 
 #### Cinta
 
@@ -261,3 +261,5 @@ Copyright (c) 2022 kounch
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE
+
+Spectrum Turboloader by Esben Krag Hansen (from Your Sinclair, May 1986)

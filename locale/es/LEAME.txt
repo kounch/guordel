@@ -3,7 +3,7 @@ ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o su
 
 Instrucciones de carga
 ----------------------
-Puede obtener la última versión del juego, aqui: https://github.com/kounch/guordel/releases/latest. Hay ficheros para descargar en tres formatos distintos: cinta (`.tap`) para ZX Spectrum clásico, archivos para esxdos (http://esxdos.org), y archivos para  ZX Spectrum Next (https://www.specnext.com). Además estos están en varios idiomas.
+Puede obtener la última versión del juego, aqui: https://github.com/kounch/guordel/releases/latest. Hay ficheros para descargar en tres formatos distintos: cinta (.tap normal y .tzx turbo) para ZX Spectrum clásico, archivos para esxdos (http://esxdos.org), y archivos para  ZX Spectrum Next (https://www.specnext.com). Además estos están en varios idiomas.
 
 Cinta
 -----
@@ -13,13 +13,13 @@ esxdos
 ------
 Copie en el lugar que desee de la tarjeta de almacenamiento el contenido descomprimido del fichero ZIP marcado como para esxdos.
 Con el equipo apagado, inserte la tarjeta y encienda el ordenador. Asegúrese de arrancar correctamente con esxdos.
-Navegue hasta el directorio donde estén los ficheros y ejecute el programa `GUORDEL.BAS` desde la línea de comandos o desde algún navegador de archivos para iniciar el juego.
+Navegue hasta el directorio donde estén los ficheros y ejecute el programa GUORDEL.BAS desde la línea de comandos o desde algún navegador de archivos para iniciar el juego.
 
 ZX Spectrum Next
 ----------------
 Copie en el lugar que desee de la tarjeta SD el contenido descomprimido del fichero ZIP marcado para ZX Spectrum Next.
 Con el equipo apagado, inserte la tarjeta SD y encienda el ordenador. Para equipos compatibles, asegúrese de arrancar con el core de ZX Spectrum Next.
-Ejecute el programa `guordel.bas`, dentro del directorio donde se hayan copiado los ficheros, para arrancar el juego.
+Ejecute el programa guordel.bas, dentro del directorio donde se hayan copiado los ficheros, para arrancar el juego.
 
 
 Cómo jugar
@@ -30,3 +30,15 @@ Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra v�
 En el modo difícil, las letras reveladas y correctas (marcadas con verde) se han de utilizar en la posición correcta en intentos posteriores.
 
 Utilice las letras del teclado para escribir la palabra (use la tecla de espacio para escribir la `Ñ`) y pulse la tecla `Enter` al finalizar.
+
+
+Copyright
+---------
+
+Copyright (c) 2022 kounch
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE
+
+Spectrum Turboloader by Esben Krag Hansen (from Your Sinclair, May 1986)
