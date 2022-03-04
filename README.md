@@ -46,7 +46,7 @@ On hard mode, any revealed and correct hint (marked with green) must be used in 
 
 ![Game](./locale/en/game.png)
 
-Use the letters of the keyboard to type your word, and hit the `Enter` key when ready to guess.
+Use the letters of the keyboard to type your word, and `Caps Shift` and `0` to delete a typed key. Hit the `Enter` key when ready to guess.
 
 ### Examples
 
@@ -104,10 +104,11 @@ Reserved Spaces
 
     35840-38399 (2.5K bytes) Compiled C binary code
     38400-39167 (768 bytes) Custom font
-    39168-44024 (4856 bytes) Solutions list
-    44025-44029 (5 bytes) Word Letters
-    44030-44031 (2 bytes) Word Number
-    44032-63999 (19.5K) Word Dictionary
+    39168-43839 (4672 bytes) Solutions list
+    43840-43896 (56 bytes) Future Stats/Scores
+    43897-43901 (5 bytes) Word Letters
+    43902-43903 (2 bytes) Word Number
+    43904-63999 (20096 bytes) Word Dictionary
     64000-65536 (1.5K) Reserved for UGDs and C binary stack needs
 
 ### Word packing
@@ -168,7 +169,7 @@ En el modo difícil, las letras reveladas y correctas (marcadas con verde) se ha
 
 ![Juego](./locale/es/juego.png)
 
-Utilice las letras del teclado para escribir la palabra (use la tecla de espacio para escribir la `Ñ`) y pulse la tecla `Enter` al finalizar.
+Utilice las letras del teclado para escribir la palabra. Use la tecla de espacio para escribir la `Ñ` y la tecla `Symbol Shift` junto con una tecla de vocal para acentuarla. Use `Caps Shift` junto con `0` para borrar. Pulse la tecla `Enter` al finalizar.
 
 ### Ejemplos
 
@@ -226,10 +227,11 @@ Estos son los espacios reservados en la memoria RAM para los distintos datos del
 
     35840-38399 (2.5K bytes) Código binario compilado desde C
     38400-39167 (768 bytes) Fuente personalizada
-    39168-44024 (4856 bytes) Lista de soluciones
-    44025-44029 (5 bytes) Letras de la palabra
-    44030-44031 (2 bytes) Número de palabra
-    44032-63999 (19.5K) Diccionario de palabras
+    39168-43839 (4672 bytes) Lista de soluciones
+    43840-43896 (56 bytes) Futuras estadísticas y puntuaciones
+    43897-43901 (5 bytes) Letras de la palabra
+    43902-43903 (2 bytes) Número de palabra
+    43904-63999 (20096 bytes) Diccionario de palabras
     64000-65536 (1.5K) Reservado para UDGs y la pila del binario compilado
 
 ### Empaquetado de las palabras

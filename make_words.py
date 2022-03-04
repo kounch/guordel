@@ -131,7 +131,10 @@ def create_wordpack(str_file_words):
         i_last = 0
         for str_line in wordlist_handle.readlines():
             str_word = str_line.strip().upper()
-            str_word = str_word.replace('Ñ', '[')
+            arr_replace = (('Á', '['), ('É', '\\'), ('Í', ']'), ('Ñ', '^'),
+                           ('Ó', '_'), ('Ú', '`'))
+            for (utf_c, ascii_c) in arr_replace:
+                str_word = str_word.replace(utf_c, ascii_c)
             if len(str_word) == 5:
                 c_index = str_word[:1]
                 str_subword = str_word[1:]

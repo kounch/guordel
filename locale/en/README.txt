@@ -28,7 +28,7 @@ Guess the hidden word in six tries. Each guess must be a valid five-letter word.
 
 On hard mode, any revealed and correct hint (marked with green) must be used in the right spot in subsequent guesses.
 
-Use the letters of the keyboard to type your word, and hit the `Enter` key when ready to guess.
+Use the letters of the keyboard to type your word, and "Caps Shift" and 0 to delete a typed key. Hit the "Enter" key when ready to guess.
 
 
 Copyright
