@@ -16,7 +16,7 @@ ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its der
 
 ### Loading instructions
 
-You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in three differente formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
+You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in three differente formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx` or `.pzx`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
 
 #### Tape
 
@@ -47,6 +47,8 @@ On hard mode, any revealed and correct hint (marked with green) must be used in 
 ![Game](./locale/en/game.png)
 
 Use the letters of the keyboard to type your word, and `Caps Shift` and `0` to delete a typed key. Hit the `Enter` key when ready to guess.
+
+Game statistics are kept. On the tape version they can be saved manually, and they are stored automatically on all the other versions.
 
 ### Examples
 
@@ -105,7 +107,7 @@ Reserved Spaces
     35840-38399 (2.5K bytes) Compiled C binary code
     38400-39167 (768 bytes) Custom font
     39168-43839 (4672 bytes) Solutions list
-    43840-43896 (56 bytes) Future Stats/Scores
+    43840-43896 (56 bytes) Statistics/Scores
     43897-43901 (5 bytes) Word Letters
     43902-43903 (2 bytes) Word Number
     43904-63999 (20096 bytes) Word Dictionary
@@ -139,7 +141,7 @@ ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o su
 
 ### Instrucciones de carga
 
-Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en tres formatos distintos: cinta (`.tap` normal y `.tzx` turbo) para ZX Spectrum clásico, archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
+Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en tres formatos distintos: cinta (`.tap` normal y `.tzx` o `.pzx` turbo) para ZX Spectrum clásico, archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
 
 #### Cinta
 
@@ -170,6 +172,8 @@ En el modo difícil, las letras reveladas y correctas (marcadas con verde) se ha
 ![Juego](./locale/es/juego.png)
 
 Utilice las letras del teclado para escribir la palabra. Use la tecla de espacio para escribir la `Ñ` y la tecla `Symbol Shift` junto con una tecla de vocal para acentuarla. Use `Caps Shift` junto con `0` para borrar. Pulse la tecla `Enter` al finalizar.
+
+Se guardan estadísticas de las partidas jugadas, que se pueden guardar manualmente en la versión de cinta, y se almacenan automáticamente en resto de versiones.
 
 ### Ejemplos
 
@@ -228,7 +232,7 @@ Estos son los espacios reservados en la memoria RAM para los distintos datos del
     35840-38399 (2.5K bytes) Código binario compilado desde C
     38400-39167 (768 bytes) Fuente personalizada
     39168-43839 (4672 bytes) Lista de soluciones
-    43840-43896 (56 bytes) Futuras estadísticas y puntuaciones
+    43840-43896 (56 bytes) Estadísticas y puntuaciones
     43897-43901 (5 bytes) Letras de la palabra
     43902-43903 (2 bytes) Número de palabra
     43904-63999 (20096 bytes) Diccionario de palabras

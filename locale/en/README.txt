@@ -3,7 +3,7 @@ ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its der
 
 Loading instructions
 --------------------
-You can obtain the latest version of the game from the releases page, here: https://github.com/kounch/guordel/releases/latest. There are distribution files in three differente formats: tape for classic ZX Spectrum (normal .tap and turbo .tzx), files for esxdos (http://esxdos.org), and files for ZX Spectrum Next (https://www.specnext.com). All these are available in several languages.
+You can obtain the latest version of the game from the releases page, here: https://github.com/kounch/guordel/releases/latest. There are distribution files in three differente formats: tape for classic ZX Spectrum (normal .tap and turbo .tzx or .pzx), files for esxdos (http://esxdos.org), and files for ZX Spectrum Next (https://www.specnext.com). All these are available in several languages.
 
 Tape
 ----
@@ -30,6 +30,7 @@ On hard mode, any revealed and correct hint (marked with green) must be used in 
 
 Use the letters of the keyboard to type your word, and "Caps Shift" and 0 to delete a typed key. Hit the "Enter" key when ready to guess.
 
+Game statistics are kept. On the tape version they can be saved manually, and they are stored automatically on all the other versions.
 
 Copyright
 ---------
