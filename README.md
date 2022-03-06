@@ -16,11 +16,15 @@ ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its der
 
 ### Loading instructions
 
-You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in three differente formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx` or `.pzx`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
+You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in several formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx` or `.pzx`), +3 disk file (`.dsk`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
 
 #### Tape
 
 Type LOAD"" and "Enter", and start the tape.
+
+#### +3 disk
+
+With the disk inserted in the main drive (`A:`), without write protection, choose the menu option `Loader` and press `Enter` to start the game.
 
 #### esxdos firmware
 
@@ -133,6 +137,8 @@ The releases are using word lists obtained from these sources:
 
 [English](https://www.nytimes.com/games/wordle/index.html)
 
+If you would like to have a release of ZX GUORDEL in another language, you are welcome to create a pull request in the repository with the new files (see the files and directories in the `locale` folder to have an idea on what`s needed) or contact me directly. Send also text files with the words and solutions, and i will try to make sure that the next versions will have it added.
+
 ---
 
 ## Castellano
@@ -141,11 +147,15 @@ ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o su
 
 ### Instrucciones de carga
 
-Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en tres formatos distintos: cinta (`.tap` normal y `.tzx` o `.pzx` turbo) para ZX Spectrum clásico, archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
+Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en varios formatos: cinta (`.tap` normal y `.tzx` o `.pzx` turbo) para ZX Spectrum clásico, archivo de disco para +3 (`.dsk`), archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
 
 #### Cinta
 
 Use LOAD"" y "Enter", y ponga en marcha la cinta.
+
+#### Disco para +3
+
+Con el disco insertado en la unidad principal (`A:`), sin protección contra escritura, elija la opción `Cargador` (o `Loader`) y pulse `Enter` para iniciar el juego.
 
 #### esxdos
 
@@ -257,6 +267,8 @@ Las versiones existentes utilizan listas de palabras obtenidas de estas fuentes:
 [Castellano](https://wordle.danielfrg.com)
 
 [Inglés](https://www.nytimes.com/games/wordle/index.html)
+
+Si le gustaría que hubiera una versión de ZX GUORDEL en otro idioma, no hay problema en que cree una nueva petición (pull request) en el repositorio con los nuevos archivos (tome como referencia los ficheros y directorios dentro de `locale` para tener una idea de lo que hace falta) o puede contactar conmigo directamente. Envíe también ficheros de texto con las listas de palabras y soluciones, y procuraré que las siguientes versiones lo incluyan.
 
 ---
 

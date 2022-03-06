@@ -3,11 +3,15 @@ ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its der
 
 Loading instructions
 --------------------
-You can obtain the latest version of the game from the releases page, here: https://github.com/kounch/guordel/releases/latest. There are distribution files in three differente formats: tape for classic ZX Spectrum (normal .tap and turbo .tzx or .pzx), files for esxdos (http://esxdos.org), and files for ZX Spectrum Next (https://www.specnext.com). All these are available in several languages.
+You can obtain the latest version of the game from the releases page, here: https://github.com/kounch/guordel/releases/latest. There are distribution files in several formats: tape for classic ZX Spectrum (normal .tap and turbo .tzx or .pzx), +3 disk file (.dsk), files for esxdos (http://esxdos.org), and files for ZX Spectrum Next (https://www.specnext.com). All these are available in several languages.
 
 Tape
 ----
 Type LOAD"" and "Enter", and start the tape.
+
++3 disk
+-------
+With the disk inserted in the main drive (A:), without write protection, choose the menu option "Loader" and press "Enter" to start the game.
 
 esxdos firmware
 ---------------

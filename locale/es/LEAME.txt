@@ -3,11 +3,15 @@ ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o su
 
 Instrucciones de carga
 ----------------------
-Puede obtener la última versión del juego, aqui: https://github.com/kounch/guordel/releases/latest. Hay ficheros para descargar en tres formatos distintos: cinta (.tap normal y .tzx o .pzx turbo) para ZX Spectrum clásico, archivos para esxdos (http://esxdos.org), y archivos para  ZX Spectrum Next (https://www.specnext.com). Además estos están en varios idiomas.
+Puede obtener la última versión del juego, aquí: https://github.com/kounch/guordel/releases/latest. Hay ficheros para descargar en varios formatos: cinta (.tap normal y .tzx o .pzx turbo) para ZX Spectrum clásico, archivo de disco para +3 (.dsk), archivos para esxdos (http://esxdos.org), y archivos para  ZX Spectrum Next (https://www.specnext.com). Además estos están en varios idiomas.
 
 Cinta
 -----
 Use LOAD"" y "Enter", y ponga en marcha la cinta.
+
+Disco para +3
+-------------
+Con el disco insertado en la unidad principal (A:), sin protección contra escritura, elija la opción "Cargador" (o "Loader") y pulse "Enter" para iniciar el juego.
 
 esxdos
 ------
