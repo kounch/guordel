@@ -8,6 +8,7 @@ SPDX-License-Identifier: BSD-2-Clause
 #include "guordel.h"
 
 int main() {
+  uint8_t u_speed;
   unsigned char *p_words;
   unsigned char *p_word;
   unsigned char *p_string;
@@ -29,6 +30,8 @@ int main() {
   p_string = (unsigned char *)43897; // Result location
   p_word = p_string + 5;             // Word number location
   p_words = p_string + 7;            // Word Dictionary location
+
+  u_speed = turbo_on(); // Enable turbo mode on ZX-Uno or ZX Spectrum Next
 
   // Get Word to obtain
   word_number = *(p_word)*256 + *(p_word + 1);
@@ -93,6 +96,8 @@ int main() {
   *p_word = word_number >> 8;
   *(p_word + 1) = word_number & 0xff;
 
+  turbo_off(u_speed); // Disable turbo mode
+
   return 0;
 }
 
@@ -104,4 +109,23 @@ void fill_word(unsigned char current_letter, uint32_t i_word, char new_word[]) {
     c_letter += 65;
     new_word[j] = c_letter;
   }
+}
+
+uint8_t turbo_on() {
+  uint8_t u_speed = 0;
+  if (ZXUNO_detect()) {
+    u_speed = ZXUNO_TURBO_get();
+    ZXUNO_TURBO_set(ZXUNO_TURBO_X8); // Turbo 28Mhz
+  } else if (ZXNEXT_detect()) {
+    u_speed = ZXNEXT_TURBO_get();
+    ZXNEXT_TURBO_set(ZXNEXT_TURBO_X8); // Turbo 28Mhz
+  }
+  return u_speed;
+}
+
+void turbo_off(uint8_t u_speed) {
+  if (ZXUNO_detect())
+    ZXUNO_TURBO_set(u_speed);
+  else if (ZXNEXT_detect())
+    ZXNEXT_TURBO_set(u_speed);
 }

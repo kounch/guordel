@@ -14,7 +14,15 @@ ASFLAGS=$(TARGET) $(VERBOSITY) -c
 
 EXEC=build/guordel
 
-OBJECTS = build/guordel.o
+OBJECTS = build/guordel.o \
+		  build/zxuno.o \
+		  build/zxnext.o
+
+build/%.o: zxnext/%.c $(PRAGMA_FILE)
+	$(CC) $(CFLAGS) -o $@ $<
+
+build/%.o: zxuno/%.c $(PRAGMA_FILE)
+	$(CC) $(CFLAGS) -o $@ $<
 
 build/%.o: %.c $(PRAGMA_FILE)
 	$(CC) $(CFLAGS) -o $@ $<
