@@ -14,6 +14,13 @@ Select your desired language / Elija idioma:
 
 ZX GUORDEL is a word discovery game, for ZX Spectrum (48K or better) and its derivatives, inspired by [Wordle](https://www.nytimes.com/games/wordle/index.html). Wordle is an idea and original creation by [Josh Wardle](https://powerlanguage.co.uk), the game name is a play on his surname.
 
+The latest versions include some enhancements that may require additional hardware to be enabled:
+
+- Automatic save of statistics (esxdos, etc.)
+- Turbo mode when checking the dictionary (ZX-Uno, ZX Spectrum Next or similar)
+- Colours closer to those of the original game (ULAplus)
+- Alternative Spanish font (esxdos, etc.)
+
 ### Loading instructions
 
 You can obtain the latest version of the game from the releases page, following [this link](https://github.com/kounch/guordel/releases/latest). There are distribution files in several formats: tape for classic ZX Spectrum (normal `.tap` and turbo `.tzx` or `.pzx`), +3 disk file (`.dsk`), files for [esxdos](http://esxdos.org), and files for [ZX Spectrum Next](https://www.specnext.com). All these are available in several languages.
@@ -44,7 +51,7 @@ Browse to the directory where the files are and run the program `guordel.bas` fr
 
 ### How to play
 
-Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was. Letters marked with green are in the word and in the correct spot. Letters marked with yellow are in the word but in the wrong spot. Letters marked with red aren`t in the word in any spot.
+Guess the hidden word in six tries. Each guess must be a valid five-letter word. After each guess, the colour of the letters will change to show how close your guess was. Letters marked with green are in the word and in the correct spot. Letters marked with yellow are in the word but in the wrong spot. Letters marked with red (grey in ULAplus) aren`t in the word in any spot.
 
 On hard mode, any revealed and correct hint (marked with green) must be used in the right spot in subsequent guesses.
 
@@ -56,15 +63,15 @@ Game statistics are kept. On the tape version they can be saved manually, and th
 
 ### Examples
 
-![WEARY](./locale/en/weary.png)
+![WEARY](./locale/en/weary.png) ![ULAWEARY](./locale/en/ulaweary.png)
 
 The letter `W` is in the word and in the correct spot.
 
-![PILLS](./locale/en/pills.png)
+![PILLS](./locale/en/pills.png) ![ULAPILLS](./locale/en/ulapills.png)
 
 The letter `I` is in the word but in the wrong spot.
 
-![VAGUE](./locale/en/vague.png)
+![VAGUE](./locale/en/vague.png) ![ULAVAGUE](./locale/en/ulavague.png)
 
 The letter `U` is not in the word in any spot.
 
@@ -72,7 +79,7 @@ The letter `U` is not in the word in any spot.
 
 A Python script (version 3.6 or later) is included, which can make two data files which can be used to customize the word and solutions data.
 
-Please take note of the maximum size limits for the word data (19967 bytes) and solutions data (4856 bytes). If the files are bigger than that, the game won't work properly.
+Please take note of the maximum size limits for the word data (20096 bytes) and solutions data (4672 bytes). If the files are bigger than that, the game won't work properly.
 
 #### Arguments
 
@@ -96,9 +103,9 @@ Having a file named `words_en.txt` with all the valid words, and another file na
 Now you can use the data in this files instead of the original. When working with esxdos or ZX Spectrum Next versions, simply replace the old files with the new ones. For the tape (`.tap`) release, you have to replace the corresponding byte blocks (CODE) with the new data, keeping this structure:
 
     Program: guordel (autostart:10)
-    Bytes: guordel (start addr:35840)
+    Bytes: guordel (start addr:35328)
     Bytes: font (start addr:38400)
-    Bytes: words (start addr:44032)
+    Bytes: words (start addr:43904)
     Bytes: wordss (start addr:39168)
     Program: basic (autostart:10)
 
@@ -108,7 +115,7 @@ The `.tap` file can be modified with any of the various programs that exist ([bi
 
 Reserved Spaces
 
-    35840-38399 (2.5K bytes) Compiled C binary code
+    35328-38399 (3K) Compiled C binary code
     38400-39167 (768 bytes) Custom font
     39168-43839 (4672 bytes) Solutions list
     43840-43896 (56 bytes) Statistics/Scores
@@ -145,6 +152,13 @@ If you would like to have a release of ZX GUORDEL in another language, you are w
 
 ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o superior) y derivados, inspirado en [Wordle](https://www.nytimes.com/games/wordle/index.html). Wordle, como tal, es una idea y creación original de [Josh Wardle](https://powerlanguage.co.uk), de cuyo apellido se deriva el nombre del juego.
 
+Las últimas versiones incluyen algunas mejoras que podrían requerir hardware adicional para habilitarse:
+
+- Almacenamiento automático de estadísticas (esxdos, etc.)
+- Modo turbo al hacer consultas al diccionario (ZX-Uno, ZX Spectrum Next o similar)
+- Colores más similares al juego original (ULAplus)
+- Tipo de letra alternativo en castellano (esxdos, etc.)
+
 ### Instrucciones de carga
 
 Puede obtener la última versión del juego, siguiendo [este enlace](https://github.com/kounch/guordel/releases/latest). Hay ficheros para descargar en varios formatos: cinta (`.tap` normal y `.tzx` o `.pzx` turbo) para ZX Spectrum clásico, archivo de disco para +3 (`.dsk`), archivos para [esxdos](http://esxdos.org), y archivos para [ZX Spectrum Next](https://www.specnext.com). Además estos están en varios idiomas.
@@ -175,7 +189,7 @@ Ejecute el programa `guordel.bas`, dentro del directorio donde se hayan copiado 
 
 ### Cómo jugar
 
-Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra. Las letras marcadas con color verde están en la palabra y en la posición correcta. Las letras marcadas con color amarillo están en la palabra, pero en una posición incorrecta. Las letras marcadas con color rojo no están en la palabra.
+Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra. Las letras marcadas con color verde están en la palabra y en la posición correcta. Las letras marcadas con color amarillo están en la palabra, pero en una posición incorrecta. Las letras marcadas con color rojo (gris en ULAplus) no están en la palabra.
 
 En el modo difícil, las letras reveladas y correctas (marcadas con verde) se han de utilizar en la posición correcta en intentos posteriores.
 
@@ -187,23 +201,23 @@ Se guardan estadísticas de las partidas jugadas, que se pueden guardar manualme
 
 ### Ejemplos
 
-![GATOS](./locale/es/gatos.png)
+![GATOS](./locale/es/gatos.png) ![ULAGATOS](./locale/es/ulagatos.png)
 
 La letra `G` está en la palabra y en la posición correcta.
 
-![VOCAL](./locale/es/vocal.png)
+![VOCAL](./locale/es/vocal.png) ![ULAVOCAL](./locale/es/ulavocal.png)
 
 La letra `C` está en la palabra, pero en una posición incorrecta.
 
-![CANTO](./locale/es/canto.png)
+![CANTO](./locale/es/canto.png) ![ULACANTO](./locale/es/ulacanto.png)
 
-La letra `O` no está en la palabra.
+La letra `Ó` (con acento) no está en la palabra.
 
 ### Cómo personalizar la lista de palabras
 
 Se incluye un script de Python (versión 3.6 o superior) que sirve para crear dos ficheros de datos que se pueden usar para sustituir los datos de palabras y soluciones por otros personalizados.
 
-Notar los límites de tamaño máximo para la lista de palabras (19967 bytes) y de soluciones (4856 bytes). Si los ficheros generados superan estos límites, el juego no funciona correctamente.
+Señalar que los límites de tamaño son 20096 bytes para la lista de palabras y 4672 bytes para la de soluciones. Si los ficheros generados superan alguno de estos valores, el juego no funciona correctamente.
 
 #### Argumentos
 
@@ -227,9 +241,9 @@ Teniendo un fichero `words_es.txt` con todas las palabras válidas y otro ficher
 Ahora se deben de utilizar los datos de estos dos ficheros en vez los que vienen incluidos. En el caso de la versión para esxdos o ZX Spectrum Next, simplemente hay que reemplazarlos. En la versión en cinta (`.tap`) se han de reemplazar los bloques correspondientes del tipo bytes (CODE) con los nuevos datos, quedando esta estructura:
 
     Program: guordel (autostart:10)
-    Bytes: guordel (start addr:35840)
+    Bytes: guordel (start addr:35328)
     Bytes: font (start addr:38400)
-    Bytes: words (start addr:44032)
+    Bytes: words (start addr:43904)
     Bytes: wordss (start addr:39168)
     Program: basic (autostart:10)
 
@@ -239,7 +253,7 @@ El fichero `.tap` se puede modificar con cualquiera de los múltiples programas 
 
 Estos son los espacios reservados en la memoria RAM para los distintos datos del juego, sin contar la parte hecha con Sinclair BASIC.
 
-    35840-38399 (2.5K bytes) Código binario compilado desde C
+    35328-38399 (3K) Código binario compilado desde C
     38400-39167 (768 bytes) Fuente personalizada
     39168-43839 (4672 bytes) Lista de soluciones
     43840-43896 (56 bytes) Estadísticas y puntuaciones
