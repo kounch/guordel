@@ -1,5 +1,11 @@
 ZX GUORDEL es un juego de descubrimiento de palabras, para ZX Spectrum (48K o superior) y derivados, inspirado en Wordle (https://www.nytimes.com/games/wordle/index.html). Wordle, como tal, es una idea y creación original de  Josh Wardle (https://powerlanguage.co.uk), de cuyo apellido se deriva el nombre del juego.
 
+Las últimas versiones incluyen algunas mejoras que podrían requerir hardware adicional para habilitarse:
+
+- Almacenamiento automático de estadísticas (esxdos, etc.)
+- Modo turbo al hacer consultas al diccionario (ZX-Uno, ZX Spectrum Next o similar)
+- Colores más similares a los del juego original (ULAplus)
+- Tipo de letra alternativo en castellano (esxdos, etc.)
 
 Instrucciones de carga
 ----------------------
@@ -29,7 +35,7 @@ Ejecute el programa guordel.bas, dentro del directorio donde se hayan copiado lo
 Cómo jugar
 ----------
 
-Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra. Las letras marcadas con color verde están en la palabra y en la posición correcta. Las letras marcadas con color amarillo están en la palabra, pero en una posición incorrecta. Las letras marcadas con color rojo no están en la palabra.
+Adivine la palabra oculta en seis intentos. Cada intento debe ser una palabra válida de 5 letras. El color de las letras indica lo cerca que se está de acertar la palabra. Las letras marcadas con color verde están en la palabra y en la posición correcta. Las letras marcadas con color amarillo están en la palabra, pero en una posición incorrecta. Las letras marcadas con color rojo (gris en ULAplus) no están en la palabra.
 
 En el modo difícil, las letras reveladas y correctas (marcadas con verde) se han de utilizar en la posición correcta en intentos posteriores.
 
